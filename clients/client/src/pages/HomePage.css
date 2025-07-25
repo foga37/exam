@@ -1,0 +1,28 @@
+.homepage-container {
+  padding: 1.5rem;
+}
+
+.homepage-title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #343a40; /* темний колір */
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.error-text {
+  color: #dc3545; /* bootstrap червоний */
+  font-weight: 600;
+  margin-top: 1rem;
+}

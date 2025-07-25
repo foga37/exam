@@ -1,0 +1,54 @@
+.card-movie {
+  width: 15rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.card-movie:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-movie img {
+  height: 225px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+.card-body-movie {
+  padding: 1rem;
+}
+
+.card-title-movie {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #212529; /* Bootstrap dark text */
+}
+
+.card-text-movie {
+  font-size: 0.9rem;
+  color: #6c757d; /* Bootstrap muted text */
+  margin-bottom: 0.25rem;
+}
+
+.btn-delete {
+  width: calc(100% - 1rem);
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+}
+.movie-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}

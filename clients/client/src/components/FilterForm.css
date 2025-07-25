@@ -1,0 +1,67 @@
+.filter-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: nowrap; /* початково не переносимо */
+}
+
+/* Поля і кнопки */
+.filter-input,
+.filter-select {
+  max-width: 200px;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+}
+
+.btn-filter,
+.btn-clear {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-filter {
+  background-color: #0d6efd;
+}
+
+.btn-filter:hover {
+  background-color: #0b5ed7;
+}
+
+.btn-clear {
+  background-color: #6c757d;
+}
+
+.btn-clear:hover {
+  background-color: #5c636a;
+}
+
+/* --- Медіа-запити для мобільних --- */
+@media (max-width: 850px) {
+  .filter-form {
+    flex-wrap: wrap; /* Дозволяємо переносити елементи */
+  }
+
+  .filter-input,
+  .filter-select,
+  .btn-filter,
+  .btn-clear {
+    max-width: 100%; /* Повна ширина */
+    flex-grow: 1; /* Розтягнути по ширині */
+    margin-bottom: 0.5rem;
+  }
+
+  /* Щоб кнопки не були занадто високими */
+  .btn-filter,
+  .btn-clear {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
