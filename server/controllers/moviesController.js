@@ -11,7 +11,6 @@ export async function getMovies(req, res) {
 
   try {
     if (source === 'omdb') {
-      // Пошук тільки через OMDb API
       const url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(search)}&type=movie`;
       const response = await fetch(url);
       const data = await response.json();
@@ -33,7 +32,6 @@ export async function getMovies(req, res) {
       return res.json(movies);
     }
 
-    // Пошук у локальній базі (source=local або undefined)
     const params = [];
     const conditions = [];
     let query = 'SELECT *, ROUND(average_rating::numeric, 2) AS average_rating_rounded FROM movies';

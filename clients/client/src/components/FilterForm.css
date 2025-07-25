@@ -3,10 +3,9 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  flex-wrap: nowrap; /* початково не переносимо */
+  flex-wrap: nowrap; 
 }
 
-/* Поля і кнопки */
 .filter-input,
 .filter-select {
   max-width: 200px;
@@ -43,22 +42,20 @@
   background-color: #5c636a;
 }
 
-/* --- Медіа-запити для мобільних --- */
 @media (max-width: 850px) {
   .filter-form {
-    flex-wrap: wrap; /* Дозволяємо переносити елементи */
+    flex-wrap: wrap; 
   }
 
   .filter-input,
   .filter-select,
   .btn-filter,
   .btn-clear {
-    max-width: 100%; /* Повна ширина */
-    flex-grow: 1; /* Розтягнути по ширині */
+    max-width: 100%; 
+    flex-grow: 1;
     margin-bottom: 0.5rem;
   }
 
-  /* Щоб кнопки не були занадто високими */
   .btn-filter,
   .btn-clear {
     padding: 0.5rem;

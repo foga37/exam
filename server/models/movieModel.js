@@ -1,4 +1,4 @@
-import pool from '../db.js'; // підключення до PostgreSQL через pg Pool
+import pool from '../db.js'; 
 
 export async function getMovies({ genre, search, sort }) {
   let query = 'SELECT *, ROUND(average_rating::numeric, 2) AS average_rating FROM movies';
@@ -7,7 +7,7 @@ export async function getMovies({ genre, search, sort }) {
 
   if (genre) {
     params.push(genre);
-    conditions.push(`$${params.length} = ANY(genre)`);  // Ось сюди вставляємо
+    conditions.push(`$${params.length} = ANY(genre)`);  
   }
 
   if (search) {
@@ -63,13 +63,12 @@ export async function deleteMovie(id) {
 }
 
 export async function addRating(movieId, rating) {
-  // Припустимо, є таблиця ratings(movie_id, rating)
+
   await pool.query(
     `INSERT INTO ratings (movie_id, rating) VALUES ($1, $2)`,
     [movieId, rating]
   );
 
-  // Обчислити середній рейтинг для фільму
   const { rows } = await pool.query(
     `SELECT AVG(rating) AS average_rating FROM ratings WHERE movie_id = $1`,
     [movieId]
@@ -77,7 +76,6 @@ export async function addRating(movieId, rating) {
 
   const avg = parseFloat(rows[0].average_rating).toFixed(2);
 
-  // Оновити середній рейтинг у таблиці movies
   await pool.query(
     `UPDATE movies SET average_rating = $1 WHERE id = $2`,
     [avg, movieId]

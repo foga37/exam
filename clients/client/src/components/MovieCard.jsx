@@ -1,7 +1,7 @@
 import { deleteMovie } from '../api/movies';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './MovieCard.css';  // Імпорт стилів
+import './MovieCard.css'; 
 
 function MovieCard({ movie, onDelete }) {
   const handleDelete = async () => {

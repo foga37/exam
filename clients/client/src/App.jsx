@@ -5,7 +5,7 @@ import MovieDetail from './pages/MovieDetailPage.jsx';
 import AddMoviePage from './pages/AddMoviePage.jsx';
 import OmdbSearchPage from './pages/OmdbSearchPage.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';  // підключає Bootstrap JS з Popper.js
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';  
 
 
 function App() {

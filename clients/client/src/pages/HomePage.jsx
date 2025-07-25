@@ -48,7 +48,6 @@ function HomePage() {
       {loading && <p>Завантаження...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
-      {/* Ось тут вставляємо новий контейнер з Bootstrap */}
       <div className="row">
         {movies.length === 0 && !loading && <p>Фільми не знайдені</p>}
 

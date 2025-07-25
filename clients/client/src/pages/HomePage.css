@@ -6,7 +6,7 @@
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 2rem;
-  color: #343a40; /* темний колір */
+  color: #343a40; 
 }
 
 .movies-list {
@@ -22,7 +22,7 @@
 }
 
 .error-text {
-  color: #dc3545; /* bootstrap червоний */
+  color: #dc3545; 
   font-weight: 600;
   margin-top: 1rem;
 }

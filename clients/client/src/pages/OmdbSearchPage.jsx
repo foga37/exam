@@ -6,7 +6,7 @@ function OmdbSearchPage() {
   const navigate = useNavigate();
 
   const handleSelect = (movie) => {
-    // Перейти на форму додавання з передзаповненням
+
     navigate('/add', { state: { prefill: movie } });
   };
 
